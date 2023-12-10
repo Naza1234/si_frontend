@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/style/vendor.css">
+    <title>Vendors</title>
+</head>
+<body>
+
+    <section class="room payout">
+        <h1 class="welcome vendorName">
+            Hello,<b>......</b>
+        </h1>
+        <section class="amount vendorAccount">
+            <div>
+                <span>
+                    <img src="../assets/image/Frame 73.png" alt="">
+                    <h2>
+                        Total Revenue   
+                    </h2>
+                </span>
+                <span>
+                    <h3>
+                        Total
+                    </h3>
+                    <p>
+                        .....
+                    </p>
+                </span>
+            </div>
+            <div>
+                <span>
+                    <img src="../assets/image/Frame 73 (1).png" alt="">
+                    <h2>
+                        Available Balance
+                    </h2>
+                </span>
+                <span>
+                    <h3>
+                        Total
+                    </h3>
+                    <p>
+                        .....
+                    </p>
+                </span>
+            </div>
+            <div>
+                <span>
+                    <img src="../assets/image/Frame 73 (2).png" alt="">
+                    <h2>
+                       Pending Earnings
+                    </h2>
+                </span>
+                <span>
+                    <h3>
+                        Total
+                    </h3>
+                    <p>
+                       .....
+                    </p>
+                </span>
+            </div>
+        </section>
+        <section class="withdraw">
+            <a href="./withdrawal.html">
+                Withdraw
+            </a>
+           <a href="./withdrawal.html?Add=true">
+            +
+           </a>
+        </section>
+   
+        <section class="item-track">
+            <div class="nav">
+                <button class="but active-both-but">
+                    My Items
+                </button>
+                <button class="but">
+                    Purchased Items     
+                </button>
+            </div>
+            <button class="add" onclick="runAdd()">
+               <h5> Add products </h5> <b>+</b> 
+            </button>
+            <section class="both">
+                <ul>
+                   
+                </ul>
+            </section>
+        </section>
+    </section>
+    <section class="addproduct">
+        <form class="form">
+            <h1>
+                Add product
+            </h1>
+            <input type="file" multiple maxlength="5" class="imageInput" required>
+            <div class="img">
+                <img src="../assets/image/Untitled.png" alt="" class="img-head imagePreviews">
+                <div class="img-g">
+                    <img src="../assets/image/Untitled.png" alt="" class="imagePreviews">
+                    <img src="../assets/image/Untitled.png" alt="" class="imagePreviews">
+                    <img src="../assets/image/Untitled.png" alt="" class="imagePreviews">
+                    <img src="../assets/image/Untitled.png" alt="" class="imagePreviews">
+                </div>
+            </div>
+            <div class="form-input">
+             <label>
+               Title
+               <input type="text" placeholder="Example" required>
+             </label>
+             <label>
+                Starting Price
+               <input type="number" placeholder="00000" required>
+             </label>
+             <label>
+                starting date
+              <div>
+                <input type="date"  required>
+                <input type="time"  required>
+              </div>
+             </label>
+             <label>
+                end date
+              <div>
+                <input type="date"  required>
+                <input type="time"  required>
+              </div>
+             </label>
+             <label>
+               description
+                <textarea required></textarea>
+             </label>
+            </div>
+            <button>
+                Submit  
+            </button>
+        </form>
+    </section>
+    <section class="addproduct">
+        
+       <section class="popup">
+         <img src="" alt="" class="product_image">
+         <div class="write">
+            <h1>
+             product name
+            </h1>
+           <span>
+            <p>
+                product purchase price
+              </p>
+              <h2>
+                425,890 
+              </h2>
+           </span>
+           <span>
+            <p>
+                Buyers Name 
+              </p>
+              <h2>
+                james 
+              </h2>
+           </span>
+           <span>
+            <p>
+                contact
+              </p>
+              <h2>
+                0132251369 
+              </h2>
+           </span>
+           <span>
+            <p>
+                email
+              </p>
+              <h2>
+                example@gmail.com
+              </h2>
+           </span>
+
+         </div>
+
+         <div>
+           <button>
+            close 
+           </button>
+           <button>
+            delivered 
+           </button>
+         </div>
+       </section>         
+    </section>
+    <section class="load_body">
+        <!-- Loader -->
+    <div class="blobs">
+     <div class="blob-center"></div>
+     <div class="blob"></div>
+     <div class="blob"></div>
+     <div class="blob"></div>
+     <div class="blob"></div>
+     <div class="blob"></div>
+     <div class="blob"></div>
+    </div>
+    <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+    <defs>
+     <filter id="goo">
+       <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+       <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7" result="goo" />
+       <feBlend in="SourceGraphic" in2="goo" />
+       </filter>
+    </defs>
+    </svg>
+      </section>
+    <script src="../assets/apps/vendorjs/home.js"></script>
+</body>
+</html>

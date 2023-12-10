@@ -1,0 +1,501 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Inter', sans-serif;
+    outline: none;
+    border: none;
+}
+
+:root{
+    --yellow:#FFD700;
+    --gray-dark:#333333;
+    --light-gray:#F5F5F5;
+    --orang:#802000;
+    --blue:#802000;
+}
+
+::-webkit-scrollbar{
+    width: 3px;
+    height: 3px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: var(--orang);
+}
+input::-webkit-outer-spin-button,
+      input::-webkit-inner-spin-button {
+         -webkit-appearance: none;
+      }
+
+body{
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    background-image: url(../image/MacBook\ Pro\ 14_\ -\ 2.png);
+}
+form{
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px 10px;
+}
+form h1{
+    color: var(--orang, #FF6B00);
+    font-family: Inter;
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+form h1 b{
+    color: var(--dark-gray, #333);
+    font-family: Inter;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+form div{
+    width: 300px;
+    display: flex;
+    overflow: hidden;
+    align-self: center;
+    height: 40px;
+    border-radius: 5px;
+}
+form div .button{
+    display: flex;
+    width: 50%;
+    height: 100%;
+    border-radius: 0;
+    text-align: center;
+    /* color: var(--dark-gray, #333); */
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    justify-content: center;
+    align-items: center;
+}
+form  div .active-btn{
+    background: var(--blue, #007BFF);
+    color: #fff;
+}
+
+form ul{
+    width:720px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+form ul li{
+    flex-direction: column;
+    width: 350px;
+    height: 80px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    color: var(--gray-darck, #333);
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+form ul input{
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    background-color: rgba(217, 217, 217, 0.267);
+    color: var(--gray-darck, #333);
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+form label{
+    display: flex;
+    gap: 10px;
+    color: var(--gray-darck, #333);
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    cursor: pointer;
+}
+form .button{
+    display: flex;
+    width: 200px;
+    padding: 13px 0px;
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+    border-radius: 5px;
+    background: var(--light-gray);
+    color: #000;
+    font-family: Inter;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+form .yb{
+    background-color: var(--yellow);
+}
+form a{
+    color: #000;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    cursor: pointer;
+    align-self: center;
+}
+form a b{
+    color: var(--blue, #007BFF);
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+@media screen and (max-width : 750px) {
+    body{
+        background-image: url(../image/iPhone\ 14\ Plus\ -\ 2.png);
+    }
+    form h1{
+        padding-left: 1vw;
+    }
+    form{
+        background-color: transparent;
+        min-height: 100vh;
+        gap: 20px;
+        justify-content: center;
+    }
+    form ul{
+        width:100vw;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+    form ul li{
+        flex-direction: column;
+        width: 90vw;
+        height: 80px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        color: var(--gray-darck, #333);
+        font-family: Inter;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+    }
+    label{
+        padding-left: 1vw;
+    }
+}
+
+
+.load_body{
+    width: 100vw;
+    height: 100vh;
+    background-color: #0000006c;
+    position: fixed;
+    display: flex;
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    transform: scale(0);
+}
+.loader_out{
+    transform: scale(100%);
+}
+
+
+
+
+svg {
+  display: none;
+}
+
+.blobs {
+  filter: url(#goo);
+  width: 300px;
+  height: 300px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 70px;
+  transform-style: preserve-3d;
+}
+.blobs .blob-center {
+  transform-style: preserve-3d;
+  position: absolute;
+  background:  #fff;
+  top: 50%;
+  left: 50%;
+  width: 30px;
+  height: 30px;
+  transform-origin: left top;
+  transform: scale(0.9) translate(-50%, -50%);
+  -webkit-animation: blob-grow linear 3.4s infinite;
+          animation: blob-grow linear 3.4s infinite;
+  border-radius: 50%;
+  box-shadow: 0 -10px 40px -5px  #fff;
+}
+
+.blob {
+  position: absolute;
+  background: #fff;
+  top: 50%;
+  left: 50%;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  -webkit-animation: blobs ease-out 3.4s infinite;
+          animation: blobs ease-out 3.4s infinite;
+  transform: scale(0.9) translate(-50%, -50%);
+  transform-origin: center top;
+  opacity: 0;
+}
+.blob:nth-child(1) {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+.blob:nth-child(2) {
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
+}
+.blob:nth-child(3) {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+.blob:nth-child(4) {
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
+}
+.blob:nth-child(5) {
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+}
+
+@-webkit-keyframes blobs {
+  0% {
+    opacity: 0;
+    transform: scale(0) translate(calc(-330px - 50%), -50%);
+  }
+  1% {
+    opacity: 1;
+  }
+  35%, 65% {
+    opacity: 1;
+    transform: scale(0.9) translate(-50%, -50%);
+  }
+  99% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0) translate(calc(330px - 50%), -50%);
+  }
+}
+
+@keyframes blobs {
+  0% {
+    opacity: 0;
+    transform: scale(0) translate(calc(-330px - 50%), -50%);
+  }
+  1% {
+    opacity: 1;
+  }
+  35%, 65% {
+    opacity: 1;
+    transform: scale(0.9) translate(-50%, -50%);
+  }
+  99% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0) translate(calc(330px - 50%), -50%);
+  }
+}
+@-webkit-keyframes blob-grow {
+  0%, 39% {
+    transform: scale(0) translate(-50%, -50%);
+  }
+  40%, 42% {
+    transform: scale(1, 0.9) translate(-50%, -50%);
+  }
+  43%, 44% {
+    transform: scale(1.2, 1.1) translate(-50%, -50%);
+  }
+  45%, 46% {
+    transform: scale(1.3, 1.2) translate(-50%, -50%);
+  }
+  47%, 48% {
+    transform: scale(1.4, 1.3) translate(-50%, -50%);
+  }
+  52% {
+    transform: scale(1.5, 1.4) translate(-50%, -50%);
+  }
+  54% {
+    transform: scale(1.7, 1.6) translate(-50%, -50%);
+  }
+  58% {
+    transform: scale(1.8, 1.7) translate(-50%, -50%);
+  }
+  68%, 70% {
+    transform: scale(1.7, 1.5) translate(-50%, -50%);
+  }
+  78% {
+    transform: scale(1.6, 1.4) translate(-50%, -50%);
+  }
+  80%, 81% {
+    transform: scale(1.5, 1.4) translate(-50%, -50%);
+  }
+  82%, 83% {
+    transform: scale(1.4, 1.3) translate(-50%, -50%);
+  }
+  84%, 85% {
+    transform: scale(1.3, 1.2) translate(-50%, -50%);
+  }
+  86%, 87% {
+    transform: scale(1.2, 1.1) translate(-50%, -50%);
+  }
+  90%, 91% {
+    transform: scale(1, 0.9) translate(-50%, -50%);
+  }
+  92%, 100% {
+    transform: scale(0) translate(-50%, -50%);
+  }
+}
+@keyframes blob-grow {
+  0%, 39% {
+    transform: scale(0) translate(-50%, -50%);
+  }
+  40%, 42% {
+    transform: scale(1, 0.9) translate(-50%, -50%);
+  }
+  43%, 44% {
+    transform: scale(1.2, 1.1) translate(-50%, -50%);
+  }
+  45%, 46% {
+    transform: scale(1.3, 1.2) translate(-50%, -50%);
+  }
+  47%, 48% {
+    transform: scale(1.4, 1.3) translate(-50%, -50%);
+  }
+  52% {
+    transform: scale(1.5, 1.4) translate(-50%, -50%);
+  }
+  54% {
+    transform: scale(1.7, 1.6) translate(-50%, -50%);
+  }
+  58% {
+    transform: scale(1.8, 1.7) translate(-50%, -50%);
+  }
+  68%, 70% {
+    transform: scale(1.7, 1.5) translate(-50%, -50%);
+  }
+  78% {
+    transform: scale(1.6, 1.4) translate(-50%, -50%);
+  }
+  80%, 81% {
+    transform: scale(1.5, 1.4) translate(-50%, -50%);
+  }
+  82%, 83% {
+    transform: scale(1.4, 1.3) translate(-50%, -50%);
+  }
+  84%, 85% {
+    transform: scale(1.3, 1.2) translate(-50%, -50%);
+  }
+  86%, 87% {
+    transform: scale(1.2, 1.1) translate(-50%, -50%);
+  }
+  90%, 91% {
+    transform: scale(1, 0.9) translate(-50%, -50%);
+  }
+  92%, 100% {
+    transform: scale(0) translate(-50%, -50%);
+  }
+}
+  
+.hid{
+  display: none;
+}
+
+.error{
+  width: 70%;
+  align-self: center;
+  justify-content: center;
+  background-color: rgb(255, 193, 193);
+  box-shadow: 0px 0px 20px 2px rgb(202, 100, 100) ;
+  height: 40px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  color: red;
+  font-size: 16px;
+  font-weight: 400;
+  border-radius: 5px;
+  animation: toggle 1s forwards infinite;
+}
+.good{
+  width: 70%;
+  align-self: center;
+  justify-content: center;
+  background-color: rgb(193, 255, 201);
+  box-shadow: 0px 0px 20px 2px rgb(117, 202, 100) ;
+  height: 40px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  color:green;
+  font-size: 16px;
+  font-weight: 400;
+  border-radius: 5px;
+  animation: toggle 1s forwards infinite;
+}
+
+@keyframes toggle {
+  0%{
+    transform: translateX(-10px);
+  }
+  10%{
+    transform: translateX(10px);
+  }
+  20%{
+    transform: translateX(-7PX);
+  }
+  30%{
+    transform: translateX(7PX);
+  }
+  40%{
+    transform: translateX(-5PX);
+  }
+  50%{
+    transform: translateX(5PX);
+  }
+}

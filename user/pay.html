@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/style/user.css">
+    <title>pay out</title>
+</head>
+<body>
+    <style>
+        body{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+            background-color: #fdfcfb;
+            justify-content: center;
+        }
+        form{
+            width: 300px;
+            background-color: #fff;
+            box-shadow: 5px 5px 40px .1px #d3bbb4;
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+            border-radius:5px;
+            justify-content: space-around;
+            /* background-color: black; */
+            gap: 20px;
+        }
+        form h1{
+            font-size: 30px;
+            font-weight: 500;
+            width: 50%;
+            color: #802000;
+        }
+        form label{
+            width: 100%;
+            height: 90px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            padding: 1% 3%;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: 500;
+            color:#a7a4a4;
+        }
+        form label input{
+            background-color: rgba(0, 0, 0, 0.041);
+            height: 35px;
+            border-radius: 3px;
+            padding: 5px;
+        }
+        form button{
+            background-color: #802000;
+            width: 130px;
+            align-self:center;
+            height: 40px;
+            border-radius: 5px;
+            color: #fff;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+    </style>
+     <form>
+        <h1>
+            Delivery details
+        </h1>
+        <label>
+            Contact Number
+            <input type="text" required>
+        </label>
+        <label>
+            Delivery location
+            <input type="text" required>
+        </label>
+        <button>
+            Proceed 
+        </button>
+        
+     </form>
+    <script src="../assets/apps/user/nav.js"></script>
+    <script src="../assets/apps/user/pay.js"></script>
+</body>
+</html>
+
+
