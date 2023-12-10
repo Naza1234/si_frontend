@@ -1,5 +1,5 @@
 const apiUrl="https://si-server.onrender.com"
-const winUrl="https://auction.smaster.live"
+const winUrl="https://smaster.live"
 
 // Get the current URL
 const currentURL = window.location.search;
