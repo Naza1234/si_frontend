@@ -236,7 +236,7 @@ function productToCome(data){
                             Bid Start Time
                         </p>
                         <h3>
-                            ${element.ProductAuctionEndData}
+                            ${element.ProductAuctionStartData}
                         </h3>
                     </span>
                 </div>
