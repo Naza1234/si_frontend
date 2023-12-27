@@ -3,7 +3,7 @@ const winUrl="https://smaster.live"
 
 
 var btn=document.getElementsByClassName("btn")
-var form=document.getElementsByTagName("form")[0]
+var form=document.getElementsByTagName("form")
 btn[0].addEventListener("click",()=>{
     btn[1].classList.remove("active-btn")
     btn[0].classList.add("active-btn")
@@ -101,17 +101,48 @@ btn[1].addEventListener("click",()=>{
 
     `
 })
+var form2
 
-
-form.addEventListener("submit",(e)=>{
+form[0].addEventListener("submit",(e)=>{
     e.preventDefault()
+
+    form[0].classList.add("hid")
+    form[1].classList.remove("hid")
+    getEmail()
+    document.getElementsByClassName("email")[0].innerHTML=document.getElementsByTagName("input")[2].value
+})
+var otp
+function getEmail(){
+  fetch(`${apiUrl}/user/emailVerification/${document.getElementsByTagName("input")[2].value}`)
+  .then((response) => {
+  return response.json();
+  })
+  .then((data) => {
+    otp=data.code
+  }
+  )
+  .catch((error) => {
+  console.error('Error:', error);
+  });
+  
+}
+
+  form[1].addEventListener("submit",(e)=>{
+    e.preventDefault()
+    var inputOPT=document.getElementsByClassName("opt")[0].value
+    if(inputOPT===otp){
+  
     if(btn[0].classList.contains("active-btn")){
         user()
     }
     if(btn[1].classList.contains("active-btn")){
         vendor()
     }
-})
+    }else{
+        document.getElementsByClassName("emailOPTerror")[0].innerHTML="bad OTP"
+        document.getElementsByClassName("emailOPTerror")[0].classList.add("error")
+    }
+  })
 
 function user(){
   document.querySelector(".load_body").classList.add("loader_out")
