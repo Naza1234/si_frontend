@@ -25,6 +25,9 @@ return response.json();
 })
 .then((data) => {
 dataIn(data)
+if(data.vendorVerificationStatus === pending){
+    window.location=winUrl
+}
 })
 .catch((error) => {
 
