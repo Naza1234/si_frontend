@@ -91,7 +91,14 @@ form  div .active-btn{
     background: var(--blue, #007BFF);
     color: #fff;
 }
-
+form div.radio {
+  width: 100%;
+  display: flex;
+  padding: 0;
+  align-items: center;
+  gap: 5px;
+  height: fit-content;
+}
 form ul{
     width:720px;
     display: flex;
