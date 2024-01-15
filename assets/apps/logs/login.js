@@ -76,7 +76,7 @@ function vendor(){
         vendorEmail:formInputs[0].value,
         vendorPassword:formInputs[1].value,
     }
-    console.log(params);
+    
 
     const requestOptions = {
         method: 'POST',
